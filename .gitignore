@@ -1,0 +1,19 @@
+# Build output
+bin/
+obj/
+librefs/
+
+# IDE
+.vs/
+.idea/
+*.user
+*.suo
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Mod artifacts — released through GitHub Releases only
+*.sml
+*.zip
+release/

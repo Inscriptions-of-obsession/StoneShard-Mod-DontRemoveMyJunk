@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>DontRemoveMyJunk</AssemblyName>
+    <RootNamespace>DontRemoveMyJunk</RootNamespace>
+    <!-- ModShardLauncher-Enhanced 所在目录。
+         默认指向常见的 Steam 安装位置，也可用环境变量 MSLE_DIR 覆盖：
+         $env:MSLE_DIR = "D:\...\ModShardLauncher-Enhanced" -->
+    <MSLEDir Condition="'$(MSLEDir)' == '' and '$(MSLE_DIR)' != ''">$(MSLE_DIR)</MSLEDir>
+    <MSLEDir Condition="'$(MSLEDir)' == ''">D:\steam\steamapps\common\Stoneshard\tools\ModShardLauncher-Enhanced</MSLEDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="ModShardLauncher">
+      <HintPath>$(MSLEDir)\ModShardLauncher.dll</HintPath>
+    </Reference>
+    <Reference Include="UndertaleModLib">
+      <HintPath>$(MSLEDir)\UndertaleModLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
